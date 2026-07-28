@@ -1,0 +1,516 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { SITE_CONFIG } from '../data/config';
+import { bairrosData } from '../data/bairros';
+
+const allServicos = await getCollection('servicos');
+const servicosOrdenados = allServicos.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="" description="Procurando por Serralheria em Campinas? Especialistas em portões sob medida, mezaninos e estruturas metálicas. Solicite um orçamento grátis pelo WhatsApp!">
+  <!-- Hero Section -->
+  <section class="relative bg-slate-950 text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="/hero_metalworker.png" 
+        alt="Serralheiro profissional trabalhando em serralheria em Campinas" 
+        class="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-110"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/75 to-slate-950/95"></div>
+    </div>
+
+    <div class="safe-container relative z-10">
+      <div class="max-w-3xl mx-auto text-center space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/40 text-primary font-bold text-xs uppercase tracking-wider backdrop-blur-md">
+          <span>📍 Atendimento Premium em Campinas e Região</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight drop-shadow-md">
+          Serralheria em Campinas com <span class="text-primary underline decoration-amber-400 decoration-wavy">Qualidade e Segurança</span>
+        </h1>
+
+        <p class="text-slate-200 text-lg md:text-xl font-medium leading-relaxed drop-shadow">
+          Procurando uma <strong>empresa de serralheria</strong> confiável? A Precisão Metal é a sua <strong>serralheria e estruturas metálicas</strong> em Campinas. Desenvolvemos portões sob medida, mezaninos, portas de aço e grades com garantia de durabilidade. Se você precisa de um <strong>serralheiro perto de mim</strong> com atendimento rápido, fale conosco hoje mesmo!
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+          <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-2xl shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Solicitar Orçamento Grátis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DIFERENCIAIS (EXATAMENTE 3 CAIXAS) -->
+  <section id="diferenciais" class="section-spacing bg-white border-b border-slate-200/80">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-extrabold text-xs uppercase tracking-wider">
+          <span>🛡️ Garantia de Qualidade & Compromisso</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Por Que Escolher Nossa Serralheria em Campinas?
+        </h2>
+
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Combinamos matéria-prima de excelência, equipe especializada e pontualidade rigorosa em Campinas.
+        </p>
+      </div>
+
+      <!-- 3 Caixas em Grid Responsivo de 1 Linha -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Caixa 1 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 space-y-4 group">
+          <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center text-3xl group-hover:bg-primary group-hover:scale-105 transition-all">
+            🛡️
+          </div>
+          <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+            Material Galvalume Antiferrugem
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Trabalhamos exclusivamente com aço galvalume e perfis metálicos certificados, oferecendo máxima resistência à chuva e sol.
+          </p>
+        </div>
+
+        <!-- Caixa 2 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 space-y-4 group">
+          <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center text-3xl group-hover:bg-primary group-hover:scale-105 transition-all">
+            ⚡
+          </div>
+          <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+            Orçamento Rápido em 24h
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Atendimento ágil pelo WhatsApp. Enviamos o orçamento detalhado em até 24 horas para você não perder tempo na sua obra.
+          </p>
+        </div>
+
+        <!-- Caixa 3 -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 space-y-4 group">
+          <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center text-3xl group-hover:bg-primary group-hover:scale-105 transition-all">
+            👨‍🔧
+          </div>
+          <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+            Equipe Própria de Instaladores
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Sem terceirização. Toda a fabricação e instalação são feitas por serralheiros experientes da nossa equipe, garantindo um serviço limpo e no prazo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CREDIBILIDADE & AUTORIDADE -->
+  <section class="bg-secondary border-y border-blue-900/80 relative z-20 shadow-xl py-10">
+    <div class="safe-container">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-white text-center">
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+          <div class="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+            +500
+          </div>
+          <h4 class="font-extrabold text-white text-sm md:text-base mb-1">
+            Portões & Projetos
+          </h4>
+          <p class="text-xs text-slate-300 font-medium">
+            Instalados e entregues com sucesso em Campinas.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+          <div class="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+            10+ Anos
+          </div>
+          <h4 class="font-extrabold text-white text-sm md:text-base mb-1">
+            de Experiência
+          </h4>
+          <p class="text-xs text-slate-300 font-medium">
+            Especialização técnica em serralheria de precisão.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+          <div class="text-3xl md:text-4xl font-black text-primary mb-1 tracking-tight">
+            100%
+          </div>
+          <h4 class="font-extrabold text-white text-sm md:text-base mb-1">
+            Entrega no Prazo
+          </h4>
+          <p class="text-xs text-slate-300 font-medium">
+            Compromisso rigoroso com o seu cronograma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Serviços -->
+  <section id="servicos" class="section-spacing bg-slate-100">
+    <div class="safe-container">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+        <h2 class="text-3xl md:text-5xl font-black text-secondary">Serralheria e Estruturas Metálicas em Campinas</h2>
+        <p class="text-slate-600 font-medium">Soluções completas sob medida para residências, comércios e indústrias em Campinas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicosOrdenados.slice(0, 6).map((item) => (
+          <a href={`/servicos/${item.slug}`} class="group bg-white p-8 rounded-3xl shadow-lg border border-slate-200/80 hover:border-amber-400/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                <span class="text-2xl flex items-center justify-center" set:html={item.data.icon} />
+              </div>
+              <h3 class="text-xl font-black text-slate-900 mb-3 group-hover:text-secondary transition-colors">{item.data.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">{item.data.summary || item.data.description}</p>
+            </div>
+            <span class="text-secondary font-bold text-sm group-hover:text-amber-500 transition-colors flex items-center gap-1">Saiba Mais &rarr;</span>
+          </a>
+        ))}
+      </div>
+
+      <!-- Botão "Mais Serviços" -->
+      <div class="mt-14 text-center">
+        <a 
+          href="/servicos" 
+          class="inline-flex items-center justify-center gap-3 bg-secondary hover:bg-blue-900 text-primary font-black px-10 py-4.5 rounded-2xl text-base md:text-lg shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all duration-300 border border-blue-800/60 group"
+        >
+          <span>Mais Serviços</span>
+          <span class="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO COMO FUNCIONA / PROCESSO DE TRABALHO -->
+  <section id="processo" class="section-spacing bg-white border-t border-slate-200/80 relative overflow-hidden">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-secondary font-extrabold text-xs uppercase tracking-wider">
+          <span>⚡ Simples, Transparente e Sem Burocracia</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Sua Empresa de Serralheria em Campinas Passo a Passo
+        </h2>
+
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Do primeiro contato até a entrega final com garantia, saiba como transformamos seu projeto em realidade em 4 passos simples:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <!-- Passo 1 -->
+        <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="w-12 h-12 bg-secondary text-primary rounded-2xl font-black text-xl flex items-center justify-center shadow-md">
+                01
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+              1. Contato Inicial
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Você entra em contato pelo WhatsApp ou telefone e explica sua necessidade (portão, mezanino, grade ou manutenção).
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/80 text-xs font-bold text-emerald-600 flex items-center gap-1">
+            <span>✓ Resposta Rápida</span>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="w-12 h-12 bg-amber-500 text-slate-950 rounded-2xl font-black text-xl flex items-center justify-center shadow-md">
+                02
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+              2. Visita Técnica & Orçamento
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Agendamos a medição técnica no local em Campinas ou avaliamos seu projeto para enviar o orçamento transparente e sem compromisso.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/80 text-xs font-bold text-amber-600 flex items-center gap-1">
+            <span>✓ Sem Taxas Escondidas</span>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="w-12 h-12 bg-secondary text-primary rounded-2xl font-black text-xl flex items-center justify-center shadow-md">
+                03
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+              3. Fabricação & Instalação
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Fabricamos a estrutura com aço galvalume de alta qualidade e realizamos a instalação no prazo combinado com total limpeza pós-obra.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/80 text-xs font-bold text-blue-600 flex items-center gap-1">
+            <span>✓ Solda Certificada</span>
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 relative flex flex-col justify-between hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="w-12 h-12 bg-emerald-600 text-white rounded-2xl font-black text-xl flex items-center justify-center shadow-md">
+                04
+              </span>
+            </div>
+            <h3 class="text-xl font-black text-slate-900 group-hover:text-secondary transition-colors">
+              4. Entrega & Garantia Total
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Entregamos seu projeto pronto e testado, acompanhado do nosso suporte pós-venda e termo de garantia de durabilidade.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-200/80 text-xs font-bold text-emerald-600 flex items-center gap-1">
+            <span>✓ Garantia de Fábrica</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 text-center">
+        <a 
+          href={SITE_CONFIG.whatsappUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-10 py-4.5 rounded-2xl text-base md:text-lg shadow-xl shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all duration-300 group"
+        >
+          <span>Iniciar Passo 1: Solicitar Visita Técnica</span>
+          <span class="group-hover:translate-x-1.5 transition-transform duration-300">💬 &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE DEPOIMENTOS DE CLIENTES -->
+  <section id="depoimentos" class="section-spacing bg-slate-50 border-y border-slate-200/80 relative overflow-hidden">
+    <div class="safe-container relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-extrabold text-xs uppercase tracking-wider">
+          <span><span>⭐</span> 4.9/5 em Avaliações no Google em Campinas</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          O que Dizem sobre nossa Serralheria em Campinas
+        </h2>
+
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Confira a experiência de quem confiou na Serralheria Precisão Metal para executar seus projetos residenciais, comerciais e industriais.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Depoimento 1 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-lg">★★★★★</div>
+              <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1">
+                <span class="text-blue-500 font-black">G</span> Cliente Verificado
+              </span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed font-normal italic">
+              "Instalaram meu portão basculante sob medida em Barão Geraldo. O acabamento da solda e a pintura ficaram impecáveis. Cumpriram o prazo certinho e o preço foi justo!"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-slate-200/80">
+            <div class="w-12 h-12 rounded-full bg-secondary text-primary font-black flex items-center justify-center text-lg shadow-md">RS</div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-base">Ricardo Silveira</h4>
+              <p class="text-xs text-slate-500 font-semibold">Residencial • Barão Geraldo, Campinas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-lg">★★★★★</div>
+              <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1">
+                <span class="text-blue-500 font-black">G</span> Cliente Verificado
+              </span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed font-normal italic">
+              "Precisávamos ampliar a área útil da nossa loja com um mezanino metálico de alta resistência. A equipe da Precisão Metal entregou uma estrutura super segura e bem finalizada!"
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-slate-200/80">
+            <div class="w-12 h-12 rounded-full bg-amber-500 text-slate-950 font-black flex items-center justify-center text-lg shadow-md">CF</div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-base">Camila Fernandes</h4>
+              <p class="text-xs text-slate-500 font-semibold">Comercial • Centro, Campinas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 hover:-translate-y-1">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex text-amber-400 text-lg">★★★★★</div>
+              <span class="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1">
+                <span class="text-blue-500 font-black">G</span> Cliente Verificado
+              </span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed font-normal italic">
+              "Contratei para a fabricação dos corrimãos e guarda-corpos do prédio do nosso condomínio no Taquaral. Trabalho extremamente profissional, atenciosos e limpos no pós-obra."
+            </p>
+          </div>
+
+          <div class="flex items-center gap-4 pt-4 border-t border-slate-200/80">
+            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black flex items-center justify-center text-lg shadow-md">MP</div>
+            <div>
+              <h4 class="font-extrabold text-slate-900 text-base">Marcelo Prado</h4>
+              <p class="text-xs text-slate-500 font-semibold">Síndico • Taquaral, Campinas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-slate-900 text-white p-8 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="space-y-2 text-center md:text-left">
+          <h3 class="text-xl md:text-2xl font-black text-primary">Quer ser nosso próximo client satisfeito?</h3>
+          <p class="text-slate-300 text-sm">Faça como mais de 150 clientes em Campinas e solicite uma visita técnica sem compromisso.</p>
+        </div>
+        <a href={SITE_CONFIG.whatsappUrl} target="_blank" class="shrink-0 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-base shadow-lg hover:scale-105 transition-all">
+          💬 Solicitar Orçamento Grátis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) -->
+  <section id="faq" class="section-spacing bg-white border-b border-slate-200/80">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-secondary font-extrabold text-xs uppercase tracking-wider">
+          <span>❓ Dúvidas Frequentes</span>
+        </div>
+
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Dúvidas Frequentes sobre Serralheria em Campinas
+        </h2>
+
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Tire suas principais dúvidas sobre prazos, atendimento em Campinas, materiais e orçamento:
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base md:text-lg group-open:text-secondary">
+            <span>Quanto tempo leva para fabricar e instalar um portão sob medida?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 text-secondary flex items-center justify-center font-black transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/80 pt-4">
+            O prazo médio de fabricação para portões automáticos sob medida é de 7 a 15 dias úteis, dependendo da complexidade do projeto e acabamentos. A instalação é concluída em um único dia por nossa equipe própria.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base md:text-lg group-open:text-secondary">
+            <span>Quais bairros e cidades da região vocês atendem?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 text-secondary flex items-center justify-center font-black transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/80 pt-4">
+            Nossa sede é em Campinas (Av. John Boyd Dunlop), e atendemos todos os bairros da cidade (Barão Geraldo, Taquaral, Cambuí, Ouro Verde, Campo Grande, etc.) e municípios vizinhos como Sumaré, Hortolândia, Valinhos, Vinhedo e Paulínia.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base md:text-lg group-open:text-secondary">
+            <span>A visita técnica para orçamento possui algum custo?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 text-secondary flex items-center justify-center font-black transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/80 pt-4">
+            Não! A visita técnica para medição no local e elaboração do orçamento é 100% gratuita e sem compromisso para Campinas e região próxima.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base md:text-lg group-open:text-secondary">
+            <span>Qual a garantia dos portões, soldas e estruturas metálicas?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 text-secondary flex items-center justify-center font-black transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/80 pt-4">
+            Oferecemos garantia por escrito e termo de conformidade para todas as nossas estruturas metálicas, mezaninos e portões, além da garantia de fábrica para automatizadores e acessórios.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 border border-slate-200 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all hover:bg-slate-100">
+          <summary class="flex justify-between items-center font-extrabold text-slate-900 text-base md:text-lg group-open:text-secondary">
+            <span>Quais são as formas de pagamento aceitas?</span>
+            <span class="w-8 h-8 rounded-full bg-white border border-slate-200 text-secondary flex items-center justify-center font-black transition-transform group-open:rotate-180">
+              ↓
+            </span>
+          </summary>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed border-t border-slate-200/80 pt-4">
+            Aceitamos cartões de crédito em até 12x, PIX com desconto especial à vista, boleto bancário e faturamento para empresas e indústrias.
+          </p>
+        </details>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-slate-600 font-medium text-sm mb-4">Tem outra dúvida que não está aqui?</p>
+        <a href={SITE_CONFIG.whatsappUrl} target="_blank" class="inline-flex items-center gap-2 text-secondary font-extrabold text-base hover:text-amber-500 transition-colors">
+          <span>💬 Tirar Dúvida no WhatsApp com Especialista &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE BAIRROS ATENDIDOS -->
+  <section id="bairros" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary text-xs font-bold uppercase tracking-wider">
+          Área de Cobertura
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Bairros Atendidos em Campinas
+        </h2>
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Atendemos com rapidez e oferecemos visita técnica gratuita para medições e orçamentos nas seguintes regiões:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {bairrosData.map((bairro) => (
+          <a href={`/bairros/${bairro.slug}`} class="bg-white px-5 py-4 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-amber-400/50 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 group text-slate-700">
+            <span class="text-amber-500 text-sm group-hover:scale-110 transition-transform">📍</span>
+            <span class="font-bold text-xs sm:text-sm leading-tight">
+              {bairro.preposition.charAt(0).toUpperCase() + bairro.preposition.slice(1)} {bairro.name}{bairro.name.toLowerCase().includes("campinas") ? "" : " em Campinas"}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
