@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+---
+
+<Layout title="Sobre Nós" description="Conheça a história, visão, padrões de segurança e equipe da principal serralheria de Campinas e região metropolitana.">
+  <!-- Hero da Página Sobre -->
+  <section class="section-spacing bg-white border-b border-gray-100">
+    <div class="safe-container text-center max-w-4xl mx-auto">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary text-xs font-bold uppercase tracking-wider mb-6">
+        Nossa Trajetória
+      </span>
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
+        Tradição em Aço, Compromisso com a sua <span class="text-secondary">Segurança</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        Há mais de 10 anos oferecendo soluções completas de serralheria com mão de obra qualificada e acabamento de alto padrão em Campinas.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. Nossa História -->
+  <section class="section-spacing bg-slate-50 border-b border-gray-200/60">
+    <div class="safe-container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
+            Como a {SITE_CONFIG.name} Começou
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            Fundada em Campinas com a missão de elevar o padrão de qualidade das estruturas metálicas da região, nossa serralheria nasceu da paixão pela metalurgia artesanal aliada à precisão da engenharia moderna.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Ao longo dos anos, expandimos nossa fábrica e investimos em equipamentos de última geração para corte de precisão, dobra CNC e soldagem TIG/MIG. Hoje, atendemos com orgulho centenas de residências, estabelecimentos comerciais e indústrias na Região Metropolitana de Campinas.
+          </p>
+        </div>
+        <div class="bg-secondary p-10 lg:p-12 rounded-3xl text-white shadow-xl">
+          <div class="text-primary text-5xl font-black mb-4">10+</div>
+          <h3 class="text-2xl font-bold mb-4">Anos de Atuação em Campinas</h3>
+          <p class="text-blue-100 text-sm leading-relaxed mb-6">
+            Mais de 1.500 projetos executados entre portões automáticos, mezaninos industriais, galpões e grades de proteção.
+          </p>
+          <div class="pt-6 border-t border-blue-900/80 flex items-center justify-between text-xs text-blue-200 font-semibold">
+            <span>✓ Projetos sob Medida</span>
+            <span>✓ Atendimento Local</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Missão, Visão e Valores -->
+  <section class="section-spacing bg-white border-b border-gray-100">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-4">
+          Nossos Pilares Fundamentais
+        </h2>
+        <p class="text-gray-600">
+          Valores que guiam cada corte de tubo, cada ponto de solda e cada instalação realizada por nossa equipe.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+        <div class="bg-slate-50 p-10 lg:p-12 rounded-3xl border border-gray-200/80">
+          <div class="w-14 h-14 bg-primary/20 text-accent rounded-2xl flex items-center justify-center font-bold text-2xl mb-6">
+            🎯
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Missão</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Proporcionar tranquilidade e segurança aos nossos clientes por meio de estruturas metálicas de alta resistência, pontualidade britânica e acabamento impecável.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-10 lg:p-12 rounded-3xl border border-gray-200/80">
+          <div class="w-14 h-14 bg-primary/20 text-accent rounded-2xl flex items-center justify-center font-bold text-2xl mb-6">
+            👁️
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Visão</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Ser reconhecida de forma permanente como a melhor e mais confiável serralheria da Região Metropolitana de Campinas em termos de qualidade e inovação.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-10 lg:p-12 rounded-3xl border border-gray-200/80">
+          <div class="w-14 h-14 bg-primary/20 text-accent rounded-2xl flex items-center justify-center font-bold text-2xl mb-6">
+            💎
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Valores</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Transparência nos orçamentos, segurança intransigente do trabalhador, inovação contínua nos processos e valorização do relacionamento de longo prazo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Compromisso com a Segurança -->
+  <section class="section-spacing bg-slate-50 border-b border-gray-200/60">
+    <div class="safe-container">
+      <div class="bg-white p-10 lg:p-16 rounded-3xl border border-gray-200/80 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-xs font-black bg-amber-100 text-amber-900 px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
+              Normas Técnicas & Rigor
+            </span>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-6">
+              Compromisso Inegociável com a Segurança Estrutural
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Todos os nossos mezaninos, coberturas e galpões obedecem rigorosamente às normas técnicas brasileiras (ABNT). Realizamos testes de resistência de solda e utilizamos sistemas de fixação química homologados.
+            </p>
+            <ul class="space-y-3 text-sm text-gray-700 font-semibold">
+              <li class="flex items-center gap-2">✓ Soldadores qualificados e certificados</li>
+              <li class="flex items-center gap-2">✓ Adequação integral às normas de acessibilidade e bombeiros</li>
+              <li class="flex items-center gap-2">✓ Tratamento anticorrosivo em 100% das peças metálicas</li>
+            </ul>
+          </div>
+          <div class="bg-secondary/5 p-8 rounded-2xl border border-secondary/10 text-center">
+            <div class="text-5xl mb-4">🛡️</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Segurança Garantida</h3>
+            <p class="text-gray-600 text-sm">Garantimos a integridade estrutural e oferecemos suporte pós-instalação contínuo para sua tranquilidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Nossa Equipe -->
+  <section class="section-spacing bg-white">
+    <div class="safe-container text-center">
+      <div class="max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-4">
+          Atendimento Humanizado e Especializado
+        </h2>
+        <p class="text-gray-600 text-lg">
+          Nossa equipe é formada por especialistas que entendem a realidade de Campinas e buscam a melhor solução para o seu orçamento.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-12">
+        <div class="bg-slate-50 p-10 rounded-3xl border border-gray-200">
+          <div class="w-20 h-20 bg-secondary text-primary rounded-full flex items-center justify-center font-black text-3xl mx-auto mb-6">👨‍🔧</div>
+          <h3 class="text-xl font-bold text-gray-900">Mestres Serralheiros</h3>
+          <p class="text-gray-600 text-sm mt-2">Dedicados ao corte, montagem e soldagem artesanal de precisão.</p>
+        </div>
+
+        <div class="bg-slate-50 p-10 rounded-3xl border border-gray-200">
+          <div class="w-20 h-20 bg-secondary text-primary rounded-full flex items-center justify-center font-black text-3xl mx-auto mb-6">📐</div>
+          <h3 class="text-xl font-bold text-gray-900">Projetistas & Medição</h3>
+          <p class="text-gray-600 text-sm mt-2">Visitas técnicas em Campinas para medições milimétricas no local.</p>
+        </div>
+
+        <div class="bg-slate-50 p-10 rounded-3xl border border-gray-200">
+          <div class="w-20 h-20 bg-secondary text-primary rounded-full flex items-center justify-center font-black text-3xl mx-auto mb-6">💬</div>
+          <h3 class="text-xl font-bold text-gray-900">Consultores Comerciais</h3>
+          <p class="text-gray-600 text-sm mt-2">Atendimento ágil para tirar dúvidas e gerar orçamentos rápidos.</p>
+        </div>
+      </div>
+
+      <a href="/contato" class="bg-primary hover:bg-yellow-400 text-accent font-black px-10 py-5 rounded-2xl text-base transition-all shadow-lg inline-block">
+        Falar com Nossa Equipe Agora ⚡
+      </a>
+    </div>
+  </section>
+</Layout>
