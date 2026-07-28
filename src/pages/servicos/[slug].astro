@@ -1,0 +1,307 @@
+---
+export const prerender = true;
+
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { SITE_CONFIG } from '../../data/config';
+import { bairrosData } from '../../data/bairros';
+
+export async function getStaticPaths() {
+  const servicosEntries = await getCollection('servicos');
+  return servicosEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={`${entry.data.title} em Campinas`} description={entry.data.description}>
+  {entry.data.sections ? (
+    <!-- 1. Header Centralizado -->
+    <section class="py-16 bg-white border-b border-slate-100 text-center">
+      <div class="safe-container max-w-4xl mx-auto space-y-4">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary text-xs font-bold uppercase tracking-wider">
+          O Que Fazemos
+        </span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+          Soluções Completas em {entry.data.title}
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+          {entry.data.description}
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Grid de Seções Alternadas -->
+    <section class="py-16 bg-slate-50/50">
+      <div class="safe-container max-w-6xl mx-auto divide-y divide-slate-100 space-y-16">
+        {entry.data.sections.map((section, idx) => (
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-16 first:pt-0">
+            <!-- Coluna Imagem -->
+            <div class={`relative rounded-3xl overflow-hidden shadow-lg aspect-video lg:aspect-[4/3] group ${idx % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+              <span class="absolute top-4 left-4 z-10 w-10 h-10 bg-secondary text-primary rounded-full flex items-center justify-center font-black text-sm shadow-md">
+                {String(idx + 1).padStart(2, '0')}
+              </span>
+              <img src={section.image} alt={section.title} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+
+            <!-- Coluna Texto -->
+            <div class={`space-y-6 ${idx % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-500 uppercase tracking-wider">
+                ● {section.badge || 'Disponibilidade Imediata em Campinas'}
+              </span>
+              <h3 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight">
+                {section.title}
+              </h3>
+              <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+                {section.description}
+              </p>
+
+              {section.inclusions && (
+                <div class="space-y-3">
+                  <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Incluído no serviço:</h4>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+                    {section.inclusions.map((inc) => (
+                      <div class="flex items-center gap-2">
+                        <span class="text-secondary font-bold">✓</span>
+                        <span>{inc}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div class="pt-2">
+                <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-secondary hover:bg-blue-900 text-white font-black px-6 py-3.5 rounded-xl text-sm transition-all shadow-md hover:scale-105 active:scale-95">
+                  Solicitar Orçamento
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ) : (
+    <!-- 1. Hero do Serviço -->
+    <section class="section-spacing bg-white border-b border-gray-100">
+      <div class="safe-container">
+        <div class="max-w-4xl mx-auto text-center">
+          <a href="/servicos" class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-wider mb-6 hover:underline">
+            &larr; Voltar para Todos os Serviços
+          </a>
+          <div class="w-20 h-20 bg-blue-50 text-secondary rounded-3xl flex items-center justify-center font-black text-4xl mx-auto mb-6">
+            <span class="flex items-center justify-center w-10 h-10" set:html={entry.data.icon} />
+          </div>
+          <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
+            {entry.data.title}
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
+            {entry.data.description}
+          </p>
+
+          <!-- CTA Rápido no Hero -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Olá! Gostaria de solicitar um orçamento para ${encodeURIComponent(entry.data.title)}.`} target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black px-8 py-4 rounded-xl text-sm transition-all shadow-md text-center flex items-center justify-center gap-2">
+              <span>💬</span> Cotar {entry.data.title} no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Especificações Técnicas e Aplicações -->
+    <section class="section-spacing bg-slate-50 border-b border-gray-200/60">
+      <div class="safe-container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+          <!-- Especificações -->
+          <div class="bg-white p-10 lg:p-12 rounded-3xl border border-gray-200/80 shadow-sm">
+            <h2 class="text-2xl font-black text-gray-900 mb-6 flex items-center gap-3">
+              <span class="text-amber-500">⚙️</span> Especificações Técnicas
+            </h2>
+            <ul class="space-y-4">
+              {entry.data.specs.map((spec) => (
+                <li class="flex items-start gap-3 text-gray-700 font-medium text-base border-b border-gray-100 pb-3">
+                  <span class="text-emerald-600 font-bold text-lg">✓</span>
+                  <span>{spec}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Aplicações -->
+          <div class="bg-white p-10 lg:p-12 rounded-3xl border border-gray-200/80 shadow-sm">
+            <h2 class="text-2xl font-black text-gray-900 mb-6 flex items-center gap-3">
+              <span class="text-amber-500">📌</span> Onde Recomendamos Aplicar
+            </h2>
+            <ul class="space-y-4">
+              {entry.data.applications.map((app) => (
+                <li class="flex items-start gap-3 text-gray-700 font-medium text-base border-b border-gray-100 pb-3">
+                  <span class="text-secondary font-bold text-lg">📍</span>
+                  <span>{app}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Conteúdo Detalhado -->
+    <section class="py-10 md:py-12 bg-white border-b border-gray-100">
+      <div class="safe-container max-w-4xl mx-auto">
+        <div class="prose text-slate-600 max-w-none service-content">
+          <Content />
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- SEÇÃO DE BAIRROS ATENDIDOS -->
+  <section id="bairros" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary text-xs font-bold uppercase tracking-wider">
+          Área de Cobertura
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Bairros Atendidos em Campinas
+        </h2>
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Oferecemos visita técnica e medição gratuita para {entry.data.title} nas seguintes regiões:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {bairrosData.map((bairro) => (
+          <a 
+            href={`/bairros/${bairro.slug}`} 
+            class="bg-white px-5 py-4 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-amber-400/50 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 group text-slate-700"
+          >
+            <span class="text-amber-500 text-sm group-hover:scale-110 transition-transform">📍</span>
+            <span class="font-bold text-xs sm:text-sm leading-tight">
+              {bairro.preposition.charAt(0).toUpperCase() + bairro.preposition.slice(1)} {bairro.name}{bairro.name.toLowerCase().includes("campinas") ? "" : " em Campinas"}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CTA de Fechamento (WhatsApp + Ligação) -->
+  <section class="py-10 md:py-12 bg-secondary text-white">
+    <div class="safe-container max-w-4xl mx-auto text-center">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary text-xs font-extrabold uppercase tracking-wider mb-4 border border-primary/30">
+        Solicite sua Cotação Agora
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+        Gostou deste Serviço? Peça seu Orçamento!
+      </h2>
+      <p class="text-blue-100 text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
+        Realizamos medição técnica sem compromisso em qualquer bairro de Campinas. Envie suas dúvidas ou o tamanho aproximado do projeto.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+        <a href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Olá! Gostaria de solicitar um orçamento para ${encodeURIComponent(entry.data.title)}.`} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-black px-10 py-5 rounded-2xl text-base transition-all shadow-xl text-center flex items-center justify-center gap-2">
+          <span>💬</span> Conversar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    /* Estilos personalizados para o conteúdo de serviços */
+    .service-content img {
+      max-width: 500px !important;
+      width: 100% !important;
+      height: auto !important;
+      border-radius: 1rem;
+      margin: 1.5rem auto !important;
+      display: block;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .service-content p {
+      margin-top: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+      line-height: 1.625 !important;
+    }
+    .service-content h3 {
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .service-content hr {
+      margin-top: 1.5rem !important;
+      margin-bottom: 1.5rem !important;
+      border-color: #f1f5f9 !important;
+    }
+  </style>
+
+  <script define:vars={{ bairrosData }}>
+    const urlParams = new URLSearchParams(window.location.search);
+    const b = urlParams.get('b');
+    if (b) {
+      const bairroObj = bairrosData.find(x => x.slug === b);
+      if (bairroObj) {
+        const prep = bairroObj.preposition.charAt(0).toUpperCase() + bairroObj.preposition.slice(1);
+        const neighborhoodLabel = `${bairroObj.preposition} ${bairroObj.name} em Campinas`;
+        const capitalizedLabel = `${prep} ${bairroObj.name} em Campinas`;
+
+        // 1. Update Document Title
+        document.title = document.title.replace(/em\s+Campinas/gi, capitalizedLabel);
+
+        // 2. Walk the DOM within <main> and replace text
+        const walkAndReplaceText = (node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            let val = node.nodeValue;
+            if (/em\s+Campinas/i.test(val)) {
+              val = val.replace(/em\s+Campinas/gi, (match) => {
+                if (match.startsWith('E')) {
+                  return capitalizedLabel;
+                }
+                return neighborhoodLabel;
+              });
+              node.nodeValue = val;
+            }
+          } else {
+            if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE' && node.id !== 'bairros') {
+              for (let child of node.childNodes) {
+                walkAndReplaceText(child);
+              }
+            }
+          }
+        };
+
+        const mainEl = document.querySelector('main');
+        if (mainEl) {
+          walkAndReplaceText(mainEl);
+        }
+
+        // 3. Update links
+        const links = document.querySelectorAll('a');
+        links.forEach(a => {
+          const href = a.getAttribute('href');
+          if (href) {
+            if (href.startsWith('/servicos/')) {
+              try {
+                const url = new URL(href, window.location.origin);
+                url.searchParams.set('b', b);
+                a.setAttribute('href', url.pathname + url.search);
+              } catch(e) {}
+            } else if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+              try {
+                const decodedHref = decodeURIComponent(href);
+                const replacedHref = decodedHref.replace(/em\s+Campinas/gi, neighborhoodLabel);
+                a.setAttribute('href', encodeURI(replacedHref));
+              } catch(e) {
+                const replacedHref = href.replace(/em\s+Campinas/gi, encodeURIComponent(neighborhoodLabel));
+                a.setAttribute('href', replacedHref);
+              }
+            }
+          }
+        });
+      }
+    }
+  </script>
+</Layout>
