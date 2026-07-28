@@ -1,0 +1,57 @@
+---
+import { SITE_CONFIG } from '../data/config';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = SITE_CONFIG.description,
+  image = SITE_CONFIG.ogImage,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site || SITE_CONFIG.site).href,
+  noindex = false,
+} = Astro.props;
+
+const pageTitle = title 
+  ? `${title} | ${SITE_CONFIG.name}` 
+  : SITE_CONFIG.defaultTitle;
+
+const imageUrl = new URL(image, Astro.site || SITE_CONFIG.site).href;
+---
+
+<!-- Basic Meta Tags -->
+<title>{pageTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+
+<!-- Local SEO Meta Tags -->
+<meta name="geo.region" content="BR-SP" />
+<meta name="geo.placename" content="Campinas" />
+<meta name="geo.position" content={`${SITE_CONFIG.geo.latitude};${SITE_CONFIG.geo.longitude}`} />
+<meta name="ICBM" content={`${SITE_CONFIG.geo.latitude}, ${SITE_CONFIG.geo.longitude}`} />
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:site_name" content={SITE_CONFIG.name} />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+
+<!-- Favicon and Theme Color -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="theme-color" content="#1E3A8A" />
