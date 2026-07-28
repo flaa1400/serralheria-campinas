@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { bairrosData } from '../../data/bairros';
+
+const allServicos = await getCollection('servicos');
+const servicosOrdenados = allServicos.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Nossos Serviços | Serralheria em Campinas" description="Conheça a linha completa de serviços de serralheria: portões automáticos, mezaninos, coberturas, grades de proteção e galpões metálicos em Campinas.">
+  <!-- Hero da Listagem -->
+  <section class="py-16 md:py-20 bg-secondary text-white border-b border-blue-900/60 text-center relative overflow-hidden">
+    <div class="safe-container max-w-4xl mx-auto relative z-10">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-primary/15 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+        Catálogo Completo
+      </span>
+      <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-8">
+        Serviços Profissionais de <span class="text-primary">Serralheria em Campinas</span>
+      </h1>
+      <p class="text-lg md:text-xl text-blue-100 leading-relaxed">
+        Soluções personalizadas em aço e alumínio com alta durabilidade, tratamento anticorrosivo e garantia técnica de fábrica.
+      </p>
+    </div>
+  </section>
+
+  <!-- Lista de Serviços (Grid) -->
+  <section class="section-spacing bg-slate-50 border-b border-gray-200/60">
+    <div class="safe-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        {servicosOrdenados.map((item) => (
+          <div class="bg-white p-10 lg:p-12 rounded-3xl border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-16 h-16 bg-blue-50 text-secondary rounded-2xl flex items-center justify-center font-black text-3xl mb-8 group-hover:bg-secondary group-hover:text-primary transition-colors">
+                <span class="flex items-center justify-center w-8 h-8" set:html={item.data.icon} />
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">{item.data.title}</h2>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">{item.data.description}</p>
+              
+              <div class="mb-6">
+                <h4 class="text-xs font-bold text-gray-900 uppercase tracking-wider mb-3">Especificações Principais:</h4>
+                <ul class="space-y-1.5 text-xs text-gray-600">
+                  {item.data.specs.slice(0, 3).map((spec) => (
+                    <li class="flex items-center gap-2">
+                      <span class="text-secondary font-bold">✓</span> {spec}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-100 flex items-center justify-between">
+              <a href={`/servicos/${item.slug}`} class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-3 rounded-xl text-xs transition-all">
+                Ver Detalhes do Serviço &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE BAIRROS ATENDIDOS -->
+  <section id="bairros" class="section-spacing bg-slate-50 border-t border-slate-200/60">
+    <div class="safe-container">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary text-xs font-bold uppercase tracking-wider">
+          Área de Cobertura
+        </span>
+        <h2 class="text-3xl md:text-5xl font-black text-secondary tracking-tight">
+          Bairros Atendidos em Campinas
+        </h2>
+        <p class="text-slate-600 font-medium text-base md:text-lg">
+          Oferecemos visita técnica e medição gratuita para todos os nossos serviços nas seguintes regiões:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {bairrosData.map((bairro) => (
+          <a 
+            href={`/bairros/${bairro.slug}`} 
+            class="bg-white px-5 py-4 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-amber-400/50 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2.5 group text-slate-700"
+          >
+            <span class="text-amber-500 text-sm group-hover:scale-110 transition-transform">📍</span>
+            <span class="font-bold text-xs sm:text-sm leading-tight">
+              {bairro.preposition.charAt(0).toUpperCase() + bairro.preposition.slice(1)} {bairro.name}{bairro.name.toLowerCase().includes("campinas") ? "" : " em Campinas"}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Final de Contato Direct -->
+  <section class="py-10 md:py-12 bg-secondary text-white text-center">
+    <div class="safe-container max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
+        Precisa de um Projeto sob Medida?
+      </h2>
+      <p class="text-blue-100 text-lg mb-6">
+        Desenvolvemos projetos especiais conforme o seu desenho técnico ou necessidade do local em Campinas.
+      </p>
+      <a href="/contato" class="bg-primary hover:bg-yellow-400 text-accent font-black px-10 py-5 rounded-2xl text-base transition-all shadow-xl inline-block">
+        Solicitar Orçamento
+      </a>
+    </div>
+  </section>
+  <script define:vars={{ bairrosData }}>
+    const urlParams = new URLSearchParams(window.location.search);
+    const b = urlParams.get('b');
+    if (b) {
+      const bairroObj = bairrosData.find(x => x.slug === b);
+      if (bairroObj) {
+        const prep = bairroObj.preposition.charAt(0).toUpperCase() + bairroObj.preposition.slice(1);
+        const neighborhoodLabel = `${bairroObj.preposition} ${bairroObj.name} em Campinas`;
+        const capitalizedLabel = `${prep} ${bairroObj.name} em Campinas`;
+
+        // 1. Update Document Title
+        document.title = document.title.replace(/em\s+Campinas/gi, capitalizedLabel);
+
+        // 2. Walk the DOM within <main> and replace text
+        const walkAndReplaceText = (node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            let val = node.nodeValue;
+            if (/em\s+Campinas/i.test(val)) {
+              val = val.replace(/em\s+Campinas/gi, (match) => {
+                if (match.startsWith('E')) {
+                  return capitalizedLabel;
+                }
+                return neighborhoodLabel;
+              });
+              node.nodeValue = val;
+            }
+          } else {
+            if (node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE' && node.id !== 'bairros') {
+              for (let child of node.childNodes) {
+                walkAndReplaceText(child);
+              }
+            }
+          }
+        };
+
+        const mainEl = document.querySelector('main');
+        if (mainEl) {
+          walkAndReplaceText(mainEl);
+        }
+
+        // 3. Update links
+        const links = document.querySelectorAll('a');
+        links.forEach(a => {
+          const href = a.getAttribute('href');
+          if (href) {
+            if (href.startsWith('/servicos/')) {
+              try {
+                const url = new URL(href, window.location.origin);
+                url.searchParams.set('b', b);
+                a.setAttribute('href', url.pathname + url.search);
+              } catch(e) {}
+            } else if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+              try {
+                const decodedHref = decodeURIComponent(href);
+                const replacedHref = decodedHref.replace(/em\s+Campinas/gi, neighborhoodLabel);
+                a.setAttribute('href', encodeURI(replacedHref));
+              } catch(e) {
+                const replacedHref = href.replace(/em\s+Campinas/gi, encodeURIComponent(neighborhoodLabel));
+                a.setAttribute('href', replacedHref);
+              }
+            }
+          }
+        });
+      }
+    }
+  </script>
+</Layout>
