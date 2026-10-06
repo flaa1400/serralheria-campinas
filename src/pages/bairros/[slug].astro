@@ -19,6 +19,10 @@ const suffix = bairro.name.toLowerCase().includes("campinas") ? "" : " em Campin
 const allServicos = await getCollection('servicos');
 const servicosOrdenados = allServicos.sort((a, b) => a.data.order - b.data.order);
 
+const whatsappBairroUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+  `Olá! Vim pelo site da Precisão Metal e gostaria de solicitar um orçamento para ${bairro.preposition} ${bairro.name}${suffix}.`
+)}`;
+
 // Testemunhos secundários para compor a seção (para não ter duplicidade completa, pegamos outros depoimentos)
 const depoimentosGerais = [
   {
@@ -69,7 +73,7 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
   <section class="relative bg-slate-950 text-white py-16 md:py-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img 
-        src="/hero_metalworker.png" 
+        src="/hero_metalworker.webp" 
         alt={`Serralheiro profissional trabalhando ${bairro.preposition} ${bairro.name}${suffix}`} 
         class="w-full h-full object-cover object-center opacity-30 filter brightness-90 contrast-110"
         loading="eager"
@@ -92,9 +96,11 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-          <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-2xl shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Solicitar Orçamento no WhatsApp
+          <a href={whatsappBairroUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-2xl shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <svg class="w-8 h-8 fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span class="text-left sm:text-center leading-tight">
+              Solicitar Orçamento no WhatsApp
+            </span>
           </a>
         </div>
       </div>
@@ -195,14 +201,14 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
             {bairro.aboutText}
           </p>
           <div class="pt-2">
-            <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-secondary hover:bg-blue-900 text-white font-black px-8 py-4 rounded-2xl text-base transition-all shadow-lg hover:scale-105 active:scale-95">
+            <a href={whatsappBairroUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-secondary hover:bg-blue-900 text-white font-black px-8 py-4 rounded-2xl text-base transition-all shadow-lg hover:scale-105 active:scale-95">
               Falar com o Serralheiro
             </a>
           </div>
         </div>
         <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-video lg:aspect-[4/3]">
           <img 
-            src="/hero_metalworker.png" 
+            src="/hero_metalworker.webp" 
             alt={`Serralheria sob medida ${bairro.preposition} ${bairro.name}${suffix}`} 
             class="w-full h-full object-cover" 
           />
@@ -220,27 +226,54 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {servicosOrdenados.slice(0, 6).map((item) => (
-          <a href={`/servicos/${item.slug}?b=${bairro.slug}`} class="group bg-white p-8 rounded-3xl shadow-lg border border-slate-200/80 hover:border-amber-400/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-            <div>
-              <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
-                <span class="text-2xl flex items-center justify-center" set:html={item.data.icon} />
+        {servicosOrdenados.map((item) => {
+          const localizedTitle = getLocalizedTitle(item.data.title, bairro.preposition, bairro.name);
+          const serviceWhatsAppUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
+            `Olá! Gostaria de solicitar um orçamento para ${localizedTitle}.`
+          )}`;
+          return (
+            <div class="group bg-white p-8 rounded-3xl shadow-lg border border-slate-200/80 hover:border-amber-400/50 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 bg-amber-500/10 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-105 transition-all duration-300">
+                  <span class="text-2xl flex items-center justify-center" set:html={item.data.icon} />
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-3 group-hover:text-secondary transition-colors">
+                  <a href={`/servicos/${item.slug}?b=${bairro.slug}`} class="hover:underline">
+                    {localizedTitle}
+                  </a>
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                  {getLocalizedSummary(item.data.summary || item.data.description, bairro.preposition, bairro.name)}
+                </p>
               </div>
-              <h3 class="text-xl font-black text-slate-900 mb-3 group-hover:text-secondary transition-colors">{getLocalizedTitle(item.data.title, bairro.preposition, bairro.name)}</h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6">{getLocalizedSummary(item.data.summary || item.data.description, bairro.preposition, bairro.name)}</p>
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+                <a href={`/servicos/${item.slug}?b=${bairro.slug}`} class="text-secondary font-bold text-sm hover:text-amber-500 transition-colors flex items-center gap-1">
+                  Ver Detalhes &rarr;
+                </a>
+                <a 
+                  href={serviceWhatsAppUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs px-3.5 py-2 rounded-xl shadow-md hover:scale-105 active:scale-95 transition-all"
+                  aria-label={`Solicitar orçamento no WhatsApp para ${localizedTitle}`}
+                >
+                  <span>💬 Orçar</span>
+                </a>
+              </div>
             </div>
-            <span class="text-secondary font-bold text-sm group-hover:text-amber-500 transition-colors flex items-center gap-1">Saiba Mais &rarr;</span>
-          </a>
-        ))}
+          );
+        })}
       </div>
 
       <div class="mt-14 text-center">
         <a 
-          href={`/servicos?b=${bairro.slug}`}
+          href={whatsappBairroUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-3 bg-secondary hover:bg-blue-900 text-primary font-black px-10 py-4.5 rounded-2xl text-base md:text-lg shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all duration-300 border border-blue-800/60 group"
         >
-          <span>Mais Serviços</span>
-          <span class="group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+          <span>Solicitar Orçamento de Qualquer Serviço {bairro.preposition} {bairro.name}{suffix}</span>
+          <span class="group-hover:translate-x-1.5 transition-transform duration-300">💬 &rarr;</span>
         </a>
       </div>
     </div>
@@ -347,7 +380,7 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
 
       <div class="mt-14 text-center">
         <a 
-          href={SITE_CONFIG.whatsappUrl}
+          href={whatsappBairroUrl}
           target="_blank" 
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-10 py-4.5 rounded-2xl text-base md:text-lg shadow-xl shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all duration-300 group"
@@ -435,7 +468,7 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
           <h3 class="text-xl md:text-2xl font-black text-primary">Quer receber um orçamento sem compromisso?</h3>
           <p class="text-slate-300 text-sm">Fale diretamente com nossa fábrica e agende a visita de um serralheiro {bairro.preposition} {bairro.name}{suffix}.</p>
         </div>
-        <a href={SITE_CONFIG.whatsappUrl} target="_blank" class="shrink-0 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-base shadow-lg hover:scale-105 transition-all">
+        <a href={whatsappBairroUrl} target="_blank" class="shrink-0 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-base shadow-lg hover:scale-105 transition-all">
           💬 Chamar no WhatsApp
         </a>
       </div>
@@ -490,7 +523,7 @@ function getLocalizedSummary(originalSummary: string, preposition: string, name:
 
       <div class="mt-12 text-center">
         <p class="text-slate-600 font-medium text-sm mb-4">Tem outra dúvida? Fale com a gente!</p>
-        <a href={SITE_CONFIG.whatsappUrl} target="_blank" class="inline-flex items-center gap-2 text-secondary font-extrabold text-base hover:text-amber-500 transition-colors">
+        <a href={whatsappBairroUrl} target="_blank" class="inline-flex items-center gap-2 text-secondary font-extrabold text-base hover:text-amber-500 transition-colors">
           <span>💬 Falar no WhatsApp com o Serralheiro &rarr;</span>
         </a>
       </div>
