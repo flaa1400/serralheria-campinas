@@ -104,7 +104,7 @@ const { Content } = await entry.render();
 
           <!-- CTA Rápido no Hero -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Olá! Gostaria de solicitar um orçamento para ${encodeURIComponent(entry.data.title)}.`} target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black px-8 py-4 rounded-xl text-sm transition-all shadow-md text-center flex items-center justify-center gap-2">
+            <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-black px-8 py-4 rounded-xl text-sm transition-all shadow-md text-center flex items-center justify-center gap-2">
               <span>💬</span> Cotar {entry.data.title} no WhatsApp
             </a>
           </div>
@@ -204,7 +204,7 @@ const { Content } = await entry.render();
       </p>
 
       <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
-        <a href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Olá! Gostaria de solicitar um orçamento para ${encodeURIComponent(entry.data.title)}.`} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-black px-10 py-5 rounded-2xl text-base transition-all shadow-xl text-center flex items-center justify-center gap-2">
+        <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-black px-10 py-5 rounded-2xl text-base transition-all shadow-xl text-center flex items-center justify-center gap-2">
           <span>💬</span> Conversar no WhatsApp
         </a>
       </div>
