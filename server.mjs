@@ -40,7 +40,7 @@ const renderMainPage = () => `<!DOCTYPE html>
     "name": "Serralheria Precisão Metal",
     "legalName": "Serralheria Precisão Metal Campinas",
     "url": "http://Serralheriaprecisaometal.com.br",
-    "telephone": "(19) 99205-7328",
+    "telephone": "(19) 98998-8366",
     "priceRange": "$$",
     "description": "Serralheria em Campinas de alto padrão. Especialistas em portões sob medida, estruturas metálicas, mezaninos, portas de aço, grades, corrimãos e soldas com garantia de qualidade.",
     "address": {
@@ -161,7 +161,7 @@ const renderMainPage = () => `<!DOCTYPE html>
       </nav>
 
       <div class="hidden lg:flex items-center gap-4">
-        <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-5 py-2.5 rounded-xl text-sm transition-all shadow-md shadow-emerald-600/20 hover:scale-105 flex items-center gap-2">
+        <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-5 py-2.5 rounded-xl text-sm transition-all shadow-md shadow-emerald-600/20 hover:scale-105 flex items-center gap-2">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>
@@ -197,7 +197,7 @@ const renderMainPage = () => `<!DOCTYPE html>
     </nav>
 
     <div class="space-y-4 pt-4 border-t border-gray-800 text-center">
-      <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="mobile-link w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-4 px-6 rounded-2xl text-base transition-all shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2">
+      <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="mobile-link w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-4 px-6 rounded-2xl text-base transition-all shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2">
         <span>💬</span> Conversar no WhatsApp
       </a>
     </div>
@@ -231,7 +231,7 @@ const renderMainPage = () => `<!DOCTYPE html>
           </p>
 
           <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-2xl shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-2xl shadow-emerald-600/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
               <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               Solicitar Orçamento Grátis
             </a>
@@ -559,7 +559,7 @@ const renderMainPage = () => `<!DOCTYPE html>
 
         <div class="mt-14 text-center">
           <a 
-            href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." 
+            href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." 
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-10 py-4.5 rounded-2xl text-base md:text-lg shadow-xl shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all duration-300 group"
@@ -662,7 +662,7 @@ const renderMainPage = () => `<!DOCTYPE html>
             <h3 class="text-xl md:text-2xl font-black text-primary">Quer ser nosso próximo cliente satisfeito?</h3>
             <p class="text-slate-300 text-sm">Faça como mais de 150 clientes em Campinas e solicite uma visita técnica sem compromisso.</p>
           </div>
-          <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="shrink-0 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-base shadow-lg hover:scale-105 transition-all">
+          <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="shrink-0 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-base shadow-lg hover:scale-105 transition-all">
             💬 Solicitar Orçamento Grátis
           </a>
         </div>
@@ -753,7 +753,7 @@ const renderMainPage = () => `<!DOCTYPE html>
 
         <div class="mt-12 text-center">
           <p class="text-slate-600 font-medium text-sm mb-4">Tem outra dúvida que não está aqui?</p>
-          <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-flex items-center gap-2 text-secondary font-extrabold text-base hover:text-amber-500 transition-colors">
+          <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-flex items-center gap-2 text-secondary font-extrabold text-base hover:text-amber-500 transition-colors">
             <span>💬 Tirar Dúvida no WhatsApp com Especialista &rarr;</span>
           </a>
         </div>
@@ -770,7 +770,7 @@ const renderMainPage = () => `<!DOCTYPE html>
     </div>
 
     <a
-      href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento."
+      href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar pelo WhatsApp com Serralheria Precisão Metal"
@@ -854,7 +854,7 @@ const renderMainPage = () => `<!DOCTYPE html>
           
           <div class="space-y-2 text-sm text-gray-100">
             <p class="leading-snug">📍 Av. John Boyd Dunlop, 3520 - Jardim Nova Esperança, Campinas - SP</p>
-            <p>💬 WhatsApp: (19) 99205-7328</p>
+            <p>💬 WhatsApp: (19) 98998-8366</p>
             <p class="text-xs text-slate-300">⏰ Seg a Sex: 07:30 às 18:00 | Sáb: 08:00 às 12:00</p>
           </div>
 
@@ -994,7 +994,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
       </nav>
 
       <div class="hidden lg:flex items-center gap-4">
-        <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-5 py-2.5 rounded-xl text-sm transition-all shadow-md shadow-emerald-600/20 hover:scale-105 flex items-center gap-2">
+        <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-5 py-2.5 rounded-xl text-sm transition-all shadow-md shadow-emerald-600/20 hover:scale-105 flex items-center gap-2">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.8 1.04 3.951 1.59 6.103 1.595h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>
@@ -1030,7 +1030,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
     </nav>
 
     <div class="space-y-4 pt-6 border-t border-white/10 text-center">
-      <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="mobile-link w-full bg-[#25D366] hover:bg-emerald-600 text-white font-black py-4 px-6 rounded-2xl text-base transition-all shadow-xl flex items-center justify-center gap-2">
+      <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="mobile-link w-full bg-[#25D366] hover:bg-emerald-600 text-white font-black py-4 px-6 rounded-2xl text-base transition-all shadow-xl flex items-center justify-center gap-2">
         💬 Orçamento no WhatsApp
       </a>
     </div>
@@ -1064,7 +1064,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Estruturas metalicas em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Projetos estruturais completos para galpões comerciais, hangares, telhados e estruturas metálicas de alta durabilidade e segurança em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1076,7 +1076,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Mezaninos em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Projetamos e fabricamos mezaninos metálicos sob medida para comércios, lojas e galpões industriais com cálculo estrutural preciso e ART em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1088,7 +1088,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Serralheiro portão perto de mim em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Atendimento especializado de serralheria e fabricação de portões sob medida (basculantes, pivotantes e deslizantes) pertinho de você em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1100,7 +1100,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Manutenção portão eletrônico Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Conserto e manutenção técnica rápida de portões eletrônicos em Campinas. Troca de cabos de aço, soldagem de roldanas e reparos elétricos urgentes.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1112,7 +1112,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Instalação de Portão Automático em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Instalação e automatização de portões com motores rápidos PPA, Rossi e Peccinin, garantindo segurança e comodidade para sua residência em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1124,7 +1124,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Portas de aço em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Fabricação, instalação e automação de portas de enrolar manuais e automáticas em aço galvalume para comércio, lojas e galpões em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1136,7 +1136,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Grades e Corrimão em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Grades reforçadas para janelas e muros, além de corrimãos e guarda-corpos em aço galvanizado sob medida para escadas e rampas em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1148,7 +1148,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Serviços de Solda em Geral em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Soldas TIG/MIG e eletrodo revestido de alta precisão para reparação de peças, reformas estruturais e manutenções de segurança em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1160,7 +1160,7 @@ const renderServicesListPage = () => `<!DOCTYPE html>
               <h2 class="text-xl font-black text-slate-900 mb-3">Coberturas & Telhados Metálicos em Campinas</h2>
               <p class="text-slate-600 text-sm leading-relaxed mb-6">Coberturas térmicas em telha sanduíche galvalume e policarbonato para garagens, corredores, áreas gourmet e pátios comerciais em Campinas.</p>
             </div>
-            <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-blue-900 text-white font-bold text-center py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
               Solicitar Orçamento
             </a>
           </div>
@@ -1226,12 +1226,12 @@ const renderServicesListPage = () => `<!DOCTYPE html>
         <div>
           <h4 class="text-primary font-black text-base mb-6 tracking-wide uppercase">Serviços</h4>
           <ul class="space-y-3 text-sm text-gray-100 font-normal">
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Portões Automáticos</a></li>
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Mezaninos Metálicos</a></li>
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Portas de Aço</a></li>
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Grades e Corrimão</a></li>
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Serviços de Solda</a></li>
-            <li><a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Coberturas Metálicas</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Portões Automáticos</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Mezaninos Metálicos</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Portas de Aço</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Grades e Corrimão</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Serviços de Solda</a></li>
+            <li><a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="hover:text-primary">Coberturas Metálicas</a></li>
           </ul>
         </div>
 
@@ -1344,7 +1344,7 @@ const renderServicePage = (serviceName, serviceDesc, iconSvg) => `<!DOCTYPE html
         <h1 class="text-3xl md:text-5xl font-black text-white leading-tight">${serviceName} em Campinas</h1>
         <p class="text-slate-300 text-lg md:text-xl leading-relaxed">${serviceDesc}</p>
         <div class="pt-4">
-          <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-emerald-600/40 hover:scale-105 transition-all">
+          <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-emerald-600/40 hover:scale-105 transition-all">
             💬 Solicitar Orçamento no WhatsApp
           </a>
         </div>
@@ -1366,7 +1366,7 @@ const renderServicePage = (serviceName, serviceDesc, iconSvg) => `<!DOCTYPE html
         <div class="bg-slate-900 text-white p-8 md:p-10 rounded-3xl text-center space-y-6 shadow-2xl">
           <h3 class="text-2xl font-black text-primary">Precisa de Orçamento Rápido para ${serviceName}?</h3>
           <p class="text-slate-300">Entre em contato via WhatsApp e receba a avaliação do nosso serralheiro especialista sem compromisso.</p>
-          <a href="https://wa.me/5519992057328?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-block bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-emerald-600/40 hover:scale-105 transition-all">
+          <a href="https://wa.me/5519989988366?text=Ol%C3%A1%2C%20Vim%20do%20Site%20Precis%C3%A3o%20Metal%2C%20e%20gostaria%20de%20fazer%20um%20Or%C3%A7amento." target="_blank" class="inline-block bg-[#25D366] hover:bg-[#20ba59] text-white font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-emerald-600/40 hover:scale-105 transition-all">
             Falar pelo WhatsApp Agora
           </a>
         </div>
