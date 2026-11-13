@@ -8,7 +8,7 @@ const schema = {
   "name": SITE_CONFIG.name,
   "legalName": SITE_CONFIG.legalName,
   "url": SITE_CONFIG.site,
-  "telephone": SITE_CONFIG.phone,
+  ...(SITE_CONFIG.phone ? { "telephone": SITE_CONFIG.phone } : {}),
   "priceRange": SITE_CONFIG.priceRange,
   "image": new URL(SITE_CONFIG.ogImage, SITE_CONFIG.site).href,
   "description": SITE_CONFIG.description,

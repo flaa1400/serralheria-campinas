@@ -43,12 +43,14 @@ import { bairrosData } from '../data/bairros';
               <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center font-bold text-xl shrink-0">💬</div>
               <div>
                 <h3 class="font-bold text-gray-900 text-base">WhatsApp Comercial</h3>
-                <p class="text-gray-600 text-sm font-semibold">
-                  <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="hover:text-emerald-600 transition-all duration-300">
-                    {SITE_CONFIG.whatsappFormatted}
-                  </a>
-                </p>
-                <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 font-bold hover:underline inline-block mt-1">
+                {SITE_CONFIG.whatsappFormatted && (
+                  <p class="text-gray-600 text-sm font-semibold">
+                    <a href={SITE_CONFIG.whatsappUrl} class="hover:text-emerald-600 transition-all duration-300">
+                      {SITE_CONFIG.whatsappFormatted}
+                    </a>
+                  </p>
+                )}
+                <a href={SITE_CONFIG.whatsappUrl} class="text-xs text-emerald-600 font-bold hover:underline inline-block mt-1">
                   Iniciar conversa imediata no WhatsApp &rarr;
                 </a>
               </div>
@@ -100,7 +102,7 @@ import { bairrosData } from '../data/bairros';
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label for="phone" class="block text-sm font-bold text-gray-900 mb-2">WhatsApp / Telefone</label>
-                <input type="tel" id="phone" required class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all" placeholder={SITE_CONFIG.phone} />
+                <input type="tel" id="phone" required class="w-full bg-slate-50 border border-gray-200 rounded-xl px-4 py-3.5 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:bg-white transition-all" placeholder="(19) 99999-9999" />
               </div>
               <div>
                 <label for="email" class="block text-sm font-bold text-gray-900 mb-2">Seu E-mail (Opcional)</label>
@@ -167,9 +169,12 @@ import { bairrosData } from '../data/bairros';
         message += `*Detalhes:* ${details}`;
 
         const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
-        
-        window.open(whatsappUrl, '_blank');
+        if (whatsappNumber) {
+          const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+          window.open(whatsappUrl, '_blank');
+        } else {
+          alert('Solicitação enviada com sucesso! Em breve entraremos em contato.');
+        }
       });
     }
 
