@@ -16,10 +16,10 @@ export const SITE_CONFIG = {
     full: "Av. John Boyd Dunlop, 3520 - Jardim Nova Esperança, Campinas - SP"
   },
 
-  phone: "",
-  whatsappNumber: "",
-  whatsappFormatted: "",
-  whatsappUrl: "#",
+  phone: "(19) 98353-3233",
+  whatsappNumber: "5519983533233",
+  whatsappFormatted: "(19) 98353-3233",
+  whatsappUrl: "https://wa.me/5519983533233?text=Ol%C3%A1%20vim%20do%20Site%20Precis%C3%A3o%20Metal%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento",
   email: "serralheriaprecisaometal@yahoo.com",
 
   geo: {

@@ -155,15 +155,6 @@ const servicosOrdenados = allServicos.sort((a, b) => a.data.order - b.data.order
                 url.searchParams.set('b', b);
                 a.setAttribute('href', url.pathname + url.search);
               } catch(e) {}
-            } else if (href.includes('wa.me') || href.includes('whatsapp.com')) {
-              try {
-                const decodedHref = decodeURIComponent(href);
-                const replacedHref = decodedHref.replace(/em\s+Campinas/gi, neighborhoodLabel);
-                a.setAttribute('href', encodeURI(replacedHref));
-              } catch(e) {
-                const replacedHref = href.replace(/em\s+Campinas/gi, encodeURIComponent(neighborhoodLabel));
-                a.setAttribute('href', replacedHref);
-              }
             }
           }
         });

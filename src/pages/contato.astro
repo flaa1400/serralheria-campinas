@@ -45,12 +45,12 @@ import { bairrosData } from '../data/bairros';
                 <h3 class="font-bold text-gray-900 text-base">WhatsApp Comercial</h3>
                 {SITE_CONFIG.whatsappFormatted && (
                   <p class="text-gray-600 text-sm font-semibold">
-                    <a href={SITE_CONFIG.whatsappUrl} class="hover:text-emerald-600 transition-all duration-300">
+                    <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="hover:text-emerald-600 transition-all duration-300">
                       {SITE_CONFIG.whatsappFormatted}
                     </a>
                   </p>
                 )}
-                <a href={SITE_CONFIG.whatsappUrl} class="text-xs text-emerald-600 font-bold hover:underline inline-block mt-1">
+                <a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-600 font-bold hover:underline inline-block mt-1">
                   Iniciar conversa imediata no WhatsApp &rarr;
                 </a>
               </div>
@@ -234,15 +234,6 @@ import { bairrosData } from '../data/bairros';
                 url.searchParams.set('b', b);
                 a.setAttribute('href', url.pathname + url.search);
               } catch(e) {}
-            } else if (href.includes('wa.me') || href.includes('whatsapp.com')) {
-              try {
-                const decodedHref = decodeURIComponent(href);
-                const replacedHref = decodedHref.replace(/em\s+Campinas/gi, neighborhoodLabel);
-                a.setAttribute('href', encodeURI(replacedHref));
-              } catch(e) {
-                const replacedHref = href.replace(/em\s+Campinas/gi, encodeURIComponent(neighborhoodLabel));
-                a.setAttribute('href', replacedHref);
-              }
             }
           }
         });
